@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Questrial&display=swap");
+
+body {
+  background-color: rgb(196, 248, 224);
+  margin: 0;
+  background-image: url("https://images.unsplash.com/photo-1610054983786-d51f7cf9d40d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
+  background-size: cover;
+  background-color: green;
+  background-blend-mode: screen;
+}
+
+.container {
+  max-width: 900px;
+  margin: 1rem 2rem;
+}
+#category {
+  font-weight: bolder;
+}
+#category:hover {
+  cursor: pointer;
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: black;
+  padding: 0 1.5rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  background-image: url("https://images.unsplash.com/photo-1610037490835-a2d3a748bd14?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-blend-mode: screen;
+  background-color: #00ce2d;
+}
+
+.logo {
+  color: white;
+  font-family: "Press Start 2P", cursive;
+  text-align: left;
+}
+
+h1 {
+  margin-right: 29rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+.number-question {
+  color: black;
+  background-color: rgb(196, 248, 224);
+  background-image: url("https://images.unsplash.com/photo-1610054983786-d51f7cf9d40d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
+  background-color: hsl(135, 100%, 60%);
+  background-blend-mode: screen;
+  border: 1px solid white;
+}
+
+.form-group > label {
+  color: white;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  padding-right: 20px;
+}
+#category {
+  background-image: url("https://images.unsplash.com/photo-1610054983786-d51f7cf9d40d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
+  background-color: hsl(135, 100%, 60%);
+  background-blend-mode: screen;
+  color: black;
+  border: 1px solid white;
+}
+
+.btn {
+  background-color: hsl(135, 100%, 60%);
+  color: black;
+  font-weight: bolder;
+  padding: 0.5em 3em;
+  border-radius: 0.3em;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  background-color: #361d3b;
+
+  color: white;
+}
+
+.card-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+
+  transform-style: preserve-3d;
+  transition: 150ms;
+  cursor: pointer;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0))
+    translateY(var(--translate-y, 0));
+}
+
+.card:hover {
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+.card.flip {
+  --rotate-y: 180deg;
+}
+
+.card .front {
+  left: 0;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+  font-weight: bolder;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.flashcard-options {
+  margin-top: 0.5rem;
+}
+
+.flashcard-option {
+  margin-top: 0.25rem;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.flashcard-option:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 500px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .form-group {
+    margin-right: 300px;
+  }
+}
